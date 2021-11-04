@@ -3,14 +3,14 @@ import cython
 @cython.cclass
 class LFSR:
 
+    WORD_SIZE = cython.declare(cython.uchar)
     seed_val  = cython.declare(cython.ulong)
     tap_code  = cython.declare(cython.uchar)
-    WORD_SIZE = cython.declare(cython.uchar)
 
     def __init__(self, seed_val, tap_code):
+        self.WORD_SIZE = cython.sizeof(cython.ulong) * 8
         self.seed_val  = seed_val
-        self.tap_code  = tap_code
-        self.WORD_SIZE = cython.sizeof(seed_val) * 8
+        self.tap_code  = tap_code % self.WORD_SIZE
 
     @cython.cfunc
     @cython.returns(cython.uchar) 

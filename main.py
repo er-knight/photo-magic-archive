@@ -52,7 +52,7 @@ def main():
         print(f"error: {args.image} not found")
         return
 
-    img     = encrypt(args.image_path, args.password, (args.tap_code % 32) + 1, args.decrypt)
+    img     = encrypt(args.image_path, args.password, args.tap_code, args.decrypt)
     new_img = save_img(img, args.image_path) 
     print(f"info: {chr(100) * args.decrypt}e{chr(110) * args.encrypt}crypted image saved as {new_img}")
         
