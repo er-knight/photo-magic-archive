@@ -1,5 +1,5 @@
 # Photo Magic
-[Programming Assignment based on Linear Feedback Shift Register](https://www.cs.princeton.edu/courses/archive/fall10/cos126/assignments/lfsr.html) using Python
+Programming Assignment based on Linear Feedback Shift Register using Python
 
 ## Basic Setup
 - Clone Repository (Using SSH)
@@ -55,3 +55,7 @@ python3 main.py --encrypt --image-path=<image-path> --password=<password> --tap-
 ```sh
 python3 main.py --decrypt --image-path=<image-path> --password=<password> --tap-code=<tap-code>
 ```
+
+## Reference
+- [Random Numbers with Linear Feedback Shift Register by Computerphile (YouTube)](https://youtu.be/Ks1pw1X22y4)
+- [Assignment based on Linear Feedback Shift Register](https://www.cs.princeton.edu/courses/archive/fall10/cos126/assignments/lfsr.html)
