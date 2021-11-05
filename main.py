@@ -1,6 +1,6 @@
 import argparse
-import os
 import operator
+import pathlib
 import random
 
 from lfsr import LFSR
@@ -28,10 +28,12 @@ def encrypt(image_path: str, password: int, tap_code: int, _reverse: bool=False)
     return img_copy
 
 def save_img(img, path):
-    name, ext = path.rsplit("/", maxsplit=1)[-1].rsplit(".", maxsplit=1)
-    new_name  = f"{name}{random.choice(range(10))}.{ext}"
 
+    path     = pathlib.Path(path)
+    new_name = f"{path.stem}{random.choice(range(10))}.png"
+    
     img.save(new_name)
+
     return new_name
 
 def main():
@@ -48,9 +50,8 @@ def main():
 
     args = parser.parse_args()
 
-    if not os.path.exists(args.image_path):
-        print(f"error: {args.image} not found")
-        return
+    if not pathlib.Path(args.image_path).exists():
+        print(f"error: {args.image_path} not found"); return
 
     img     = encrypt(args.image_path, args.password, args.tap_code, args.decrypt)
     new_img = save_img(img, args.image_path) 
