@@ -45,6 +45,7 @@ Programming Assignment based on Linear Feedback Shift Register using Python
     ```
     python3 setup.py build_ext --inplace
     ```
+    *Note: [On Windows, to build an Extension Module, Microsoft Visual C/C++ (MSVC) is required.](https://cython.readthedocs.io/en/latest/src/quickstart/install.html)*
 
 ## Encrypt Image  
 ```sh
