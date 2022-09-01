@@ -1,6 +1,33 @@
 # Photo Magic
 Programming Assignment based on Linear Feedback Shift Register using Python
 
+<table>
+    <tr>
+        <td align="center"> <code> butterfly.png </code> </td>
+    </tr>
+    <tr>
+        <td align="center"><img src="images/butterfly.png" width="500"></td>
+    </tr>
+    <tr>
+        <td align="center"> 
+            <code> $ python3 main.py --encrypt --image-path=butterfly.png --password=10735 --tap-code=28 </code> <br/>
+            <code> info: encrypted image saved as butterfly26.png &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code> 
+        </td>
+    </tr>
+    <tr>
+        <td align="center"><img src="images/butterfly2.png" width="500"></td>
+    </tr>
+    <tr>
+        <td align="center"> 
+            <code> $ python3 main.py --decrypt --image-path=butterfly2.png --password=10735 --tap-code=28 </code> <br/>
+            <code> info: encrypted image saved as butterfly26.png &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code> 
+        </td>
+    </tr>
+    <tr>
+        <td align="center"><img src="images/butterfly26.png" width="500"></td>
+    </tr>
+</table>
+
 ## Basic Setup
 - Clone Repository (Using SSH)
     ```sh
@@ -45,7 +72,9 @@ Programming Assignment based on Linear Feedback Shift Register using Python
     ```
     python3 setup.py build_ext --inplace
     ```
-    *Note: [On Windows, to build an Extension Module, Microsoft Visual C/C++ (MSVC) is required.](https://cython.readthedocs.io/en/latest/src/quickstart/install.html)*
+    > **Note**:
+    >    - On **Linux**, `build-essential` and `python3-dev` packages are required to build an Extension Module.
+    >    - On **Windows**, Microsoft Visual C/C++ (MSVC) is required to build an Extension Module. It can be downloaded from [here](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist).
 
 ## Encrypt Image  
 ```sh
